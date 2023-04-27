@@ -17,7 +17,7 @@ function App() {
       <header className="App-header">
         <Box>
           <Typography variant="h1" fontWeight={700}>
-            Meu Casamento <br/>
+            Meu Casamentoo <br/>
             😭💸
           </Typography>
         </Box>
