@@ -4,41 +4,28 @@ import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
-import SkipPreviousIcon from '@mui/icons-material/SkipPrevious';
-import PlayArrowIcon from '@mui/icons-material/PlayArrow';
-import SkipNextIcon from '@mui/icons-material/SkipNext';
+import "@fontsource/roboto/700.css";
+
 
 export default function MediaControlCard({img,link,nome,}) {
   const theme = useTheme();
 
   return (
-    <Card sx={{ display: 'flex', width:"25%"}}>
-      <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+    <Card sx={{ display: 'flex', width:"sm", marginRight:"20px"}}>
+      <Box sx={{ display: 'flex', flexDirection: 'column',}}>
         <CardContent sx={{ flex: '1 0 auto' }}>
-          <Typography component="div" variant="h5">
+          <Typography component="div" variant="h5" fontWeight={700}>
           {nome}
           </Typography>
           <a href={link}>Veja aqui</a>
         </CardContent>
-        <Box sx={{ display: 'flex', alignItems: 'center', pl: 1, pb: 1 }}>
-          <IconButton aria-label="previous">
-            {theme.direction === 'rtl' ? <SkipNextIcon /> : <SkipPreviousIcon />}
-          </IconButton>
-          <IconButton aria-label="play/pause">
-            <PlayArrowIcon sx={{ height: 38, width: 38 }} />
-          </IconButton>
-          <IconButton aria-label="next">
-            {theme.direction === 'rtl' ? <SkipPreviousIcon /> : <SkipNextIcon />}
-          </IconButton>
-        </Box>
       </Box>
       <CardMedia
         component="img"
-        sx={{ width: 151 }}
+        sx={{ width: 151,}}
         image={img}
-        alt="Live from space album cover"
+        alt="Imagem não encontrada"
       />
     </Card>
   );
