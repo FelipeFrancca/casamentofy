@@ -10,22 +10,15 @@ import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
 import SwipeableViews from "react-swipeable-views";
 import { autoPlay } from "react-swipeable-views-utils";
 import carrossel1 from "../img/carrossel/carrossel1.jpg";
+import carrossel2 from "../img/carrossel/carrossel2.jpg";
+import carrossel3 from "../img/carrossel/carrossel3.jpg";
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const images = [
-  {
-    imgPath:
-      "https://setimoregistrocivil.com.br/site/images/2020/09/16/casamento2.png",
-  },
-  {
-    imgPath:
-      "https://lapisdenoiva.com/wp-content/uploads/2020/01/casamento-no-caribe-ao-por-do-sol.jpg",
-  },
-  {
-    imgPath:
-      "https://home.lejour.com.br/wp-content/uploads/2021/09/espaco-para-casamento-rancho-21.jpg",
-  },
+  carrossel1,
+  carrossel2,
+  carrossel3,
 ];
 
 function SwipeableTextMobileStepper() {
@@ -63,9 +56,8 @@ function SwipeableTextMobileStepper() {
         onChangeIndex={handleStepChange}
         enableMouseEvents
       >
-        {images.map((step, index) => (
+        {images.map((step) => (
           <div key={step.label}>
-            {Math.abs(activeStep - index) <= 2 ? (
               <Box
                 component="img"
                 sx={{
@@ -76,15 +68,13 @@ function SwipeableTextMobileStepper() {
                   width: "100%",
                   objectFit: "cover",
                 }}
-                src={step.imgPath}
-                alt={step.label}
+                src={step}
+                alt="teste"
               />
-            ) : null}
           </div>
         ))}
       </AutoPlaySwipeableViews>
       <MobileStepper
-      sx={{background: "linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(52,22,113,1) 0%, rgba(255,255,255,1) 100%);",}}
         steps={maxSteps}
         position="static"
         activeStep={activeStep}
@@ -93,8 +83,7 @@ function SwipeableTextMobileStepper() {
             size="small"
             onClick={handleNext}
             disabled={activeStep === maxSteps - 1}
-            sx={{color:"#ffffff"}}
-            
+            sx={{ color: "#000000" }}
           >
             Próximo
             {theme.direction === "rtl" ? (
@@ -105,7 +94,12 @@ function SwipeableTextMobileStepper() {
           </Button>
         }
         backButton={
-          <Button size="small" onClick={handleBack} disabled={activeStep === 0} sx={{color:"#ffffff"}}>
+          <Button
+            size="small"
+            onClick={handleBack}
+            disabled={activeStep === 0}
+            sx={{ color: "#000000" }}
+          >
             {theme.direction === "rtl" ? (
               <KeyboardArrowRight />
             ) : (
