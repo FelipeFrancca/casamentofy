@@ -17,7 +17,14 @@ import "@fontsource/roboto/700.css";
 
 function App() {
   return (
-    <Box>
+    <Box
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        maxWidth: "100%",
+      }}
+    >
       <Carrossel></Carrossel>
       <Box
         sx={{
@@ -51,21 +58,6 @@ function App() {
           <Card
             nome="Liquidificador"
             link="https://m.casasbahia.com.br/liquidificador-mondial-turbo-power-l-99-fb-preto-500w-com-3-velocidades-50004213/p/50004214"
-            img={imgliquidificador}
-          ></Card>
-          <Card
-            nome="Liquidificador"
-            link="https://bit.ly/lipeejoyce"
-            img={imgliquidificador}
-          ></Card>
-          <Card
-            nome="Liquidificador"
-            link="https://bit.ly/lipeejoyce"
-            img={imgliquidificador}
-          ></Card>
-          <Card
-            nome="Liquidificador"
-            link="https://bit.ly/lipeejoyce"
             img={imgliquidificador}
           ></Card>
           <Card

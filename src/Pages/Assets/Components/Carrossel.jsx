@@ -1,3 +1,4 @@
+import "./Carrossel.css";
 import * as React from "react";
 import { useTheme } from "@mui/material/styles";
 import Box from "@mui/material/Box";
@@ -9,17 +10,16 @@ import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
 import SwipeableViews from "react-swipeable-views";
 import { autoPlay } from "react-swipeable-views-utils";
+
+//import img
 import carrossel1 from "../img/carrossel/carrossel1.jpg";
 import carrossel2 from "../img/carrossel/carrossel2.jpg";
 import carrossel3 from "../img/carrossel/carrossel3.jpg";
+//import img end
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
-const images = [
-  carrossel1,
-  carrossel2,
-  carrossel3,
-];
+const images = [carrossel1, carrossel2, carrossel3];
 
 function SwipeableTextMobileStepper() {
   const theme = useTheme();
@@ -58,57 +58,63 @@ function SwipeableTextMobileStepper() {
       >
         {images.map((step) => (
           <div key={step.label}>
-              <Box
-                component="img"
-                sx={{
-                  minHeight: "100px",
-                  maxHeight: "300px",
-                  display: "flex",
-                  overflow: "hidden",
-                  width: "100%",
-                  objectFit: "cover",
-                }}
-                src={step}
-                alt="teste"
-              />
+            <Box
+              component="img"
+              sx={{
+                minHeight: "100px",
+                maxHeight: "300px",
+                display: "flex",
+                overflow: "hidden",
+                width: "100%",
+                objectFit: "cover",
+              }}
+              src={step}
+              alt="Imagem não encontrada"
+            />
           </div>
         ))}
       </AutoPlaySwipeableViews>
-      <MobileStepper
-        steps={maxSteps}
-        position="static"
-        activeStep={activeStep}
-        nextButton={
-          <Button
-            size="small"
-            onClick={handleNext}
-            disabled={activeStep === maxSteps - 1}
-            sx={{ color: "#000000" }}
-          >
-            Próximo
-            {theme.direction === "rtl" ? (
-              <KeyboardArrowLeft />
-            ) : (
-              <KeyboardArrowRight />
-            )}
-          </Button>
-        }
-        backButton={
-          <Button
-            size="small"
-            onClick={handleBack}
-            disabled={activeStep === 0}
-            sx={{ color: "#000000" }}
-          >
-            {theme.direction === "rtl" ? (
-              <KeyboardArrowRight />
-            ) : (
-              <KeyboardArrowLeft />
-            )}
-            Voltar
-          </Button>
-        }
-      />
+      <Box>
+        <MobileStepper
+          steps={maxSteps}
+          position="static"
+          activeStep={activeStep}
+          nextButton={
+            <Button
+              size="small"
+              onClick={handleNext}
+              disabled={activeStep === maxSteps - 1}
+              sx={{ color: "#000000" }}
+            >
+              Próximo
+              {theme.direction === "rtl" ? (
+                <KeyboardArrowLeft />
+              ) : (
+                <KeyboardArrowRight />
+              )}
+            </Button>
+          }
+          /*sx={{
+          filter: "blur(8px)",
+          webkit: "blur(8px)",
+        }}*/
+          backButton={
+            <Button
+              size="small"
+              onClick={handleBack}
+              disabled={activeStep === 0}
+              sx={{ color: "#000000" }}
+            >
+              {theme.direction === "rtl" ? (
+                <KeyboardArrowRight />
+              ) : (
+                <KeyboardArrowLeft />
+              )}
+              Voltar
+            </Button>
+          }
+        />
+      </Box>
     </Box>
   );
 }

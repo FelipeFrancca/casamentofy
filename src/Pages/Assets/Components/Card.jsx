@@ -12,7 +12,7 @@ export default function MediaControlCard({img,link,nome,}) {
   const theme = useTheme();
 
   return (
-    <Card sx={{ display: 'flex', width:"sm", marginRight:"20px"}}>
+    <Card sx={{ display: 'flex', maxWidth:"30%", marginRight:"20px", border: "solid 2px red"}}>
       <Box sx={{ display: 'flex', flexDirection: 'column',}}>
         <CardContent sx={{ flex: '1 0 auto' }}>
           <Typography component="div" variant="h5" fontWeight={700}>
