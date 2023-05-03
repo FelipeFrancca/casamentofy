@@ -19,7 +19,11 @@ import carrossel3 from "../img/carrossel/carrossel3.jpg";
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
-const images = [carrossel1, carrossel2, carrossel3];
+const images = [
+  carrossel1,
+  carrossel2,
+  carrossel3
+];
 
 function SwipeableTextMobileStepper() {
   const theme = useTheme();
