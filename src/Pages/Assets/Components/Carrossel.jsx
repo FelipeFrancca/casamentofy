@@ -64,14 +64,7 @@ function SwipeableTextMobileStepper() {
           <div key={step.label}>
             <Box
               component="img"
-              sx={{
-                minHeight: "100px",
-                maxHeight: "300px",
-                display: "flex",
-                overflow: "hidden",
-                width: "100%",
-                objectFit: "cover",
-              }}
+              className="proporcoes"
               src={step}
               alt="Imagem não encontrada"
             />
@@ -98,10 +91,6 @@ function SwipeableTextMobileStepper() {
               )}
             </Button>
           }
-          /*sx={{
-          filter: "blur(8px)",
-          webkit: "blur(8px)",
-        }}*/
           backButton={
             <Button
               size="small"

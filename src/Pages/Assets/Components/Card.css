@@ -1,9 +1,7 @@
 .cardBody {
-    display: flex; 
-    margin-right: 20px;
-    border: solid 2px gray;
-}
-
-.cardBody:hover {
-    border: solid 4px purple;
+  display: flex;
+  margin-right: 30px;
+  border-radius: 40px !important;
+  background: linear-gradient(315deg, #cacaca, #f0f0f0);
+  box-shadow: -32px -32px 63px #bebebe, 32px 32px 63px #ffffff;
 }

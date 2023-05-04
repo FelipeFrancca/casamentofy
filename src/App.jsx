@@ -2,11 +2,13 @@ import "./App.css";
 
 //MUI imports
 import { Box, Typography } from "@mui/material";
-import Card from "./Pages/Assets/Components/Card";
+
 //MUI imports end
 
 import imgliquidificador from "./Pages/Assets/img/default.png";
 import Carrossel from "./Pages/Assets/Components/Carrossel";
+import Card from "./Pages/Assets/Components/Card";
+import HomeButton from "./Pages/Assets/Components/homeButton";
 
 //Fonts imports
 import "@fontsource/roboto/300.css";
@@ -45,6 +47,11 @@ function App() {
           <Typography variant="h5" fontWeight={700}>
             Por: Felipe e Elina França
           </Typography>
+          <Box className="text-focus-in" sx={{ textAlign: "center" }}>
+          <Typography variant="h2" fontWeight={700} p={10}>
+            Lista de presentes 🛍️
+          </Typography>
+          </Box>
         </Box>
         <Box
           className="tracking-in-contract-bck-bottom"
@@ -52,7 +59,7 @@ function App() {
             display: "flex",
             flexDirection: "row",
           }}
-          p={20}
+          p={5}
           fontWeight={700}
         >
           <Card
@@ -70,6 +77,7 @@ function App() {
             link="https://bit.ly/lipeejoyce"
             img={imgliquidificador}
           ></Card>
+          <homeButtom></homeButtom>
         </Box>
       </Box>
     </Box>
