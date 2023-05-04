@@ -8,7 +8,6 @@ import { Box, Typography } from "@mui/material";
 import imgliquidificador from "./Pages/Assets/img/default.png";
 import Carrossel from "./Pages/Assets/Components/Carrossel";
 import Card from "./Pages/Assets/Components/Card";
-import HomeButton from "./Pages/Assets/Components/homeButton";
 
 //Fonts imports
 import "@fontsource/roboto/300.css";
