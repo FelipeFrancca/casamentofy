@@ -1,7 +1,17 @@
 .cardBody {
   display: flex;
   margin-right: 30px;
+  border: solid 2px purple;
+  transition: 0.3s ease;
   border-radius: 40px !important;
   background: linear-gradient(315deg, #cacaca, #f0f0f0);
   box-shadow: -32px -32px 63px #bebebe, 32px 32px 63px #ffffff;
+}
+
+.cardBody:hover {
+    border-color: purple;
+}
+
+.cardBody:not(:hover) {
+    border-color: transparent;
 }
