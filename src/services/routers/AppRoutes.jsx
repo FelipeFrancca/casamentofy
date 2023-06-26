@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import Home from "../../pages/dashboard/views/home";
 import NotFound from "../../pages/dashboard/views/NotFound";
-import Dashboard from "../../pages/dashboard/Dashboard";
+import Dashboard from "../../pages/dashboard/Dashboard.tsx";
 
 function AppRoutes() {
   return (
