@@ -5,6 +5,7 @@ import { Box, Typography } from "@mui/material";
 
 //MUI imports end
 
+import Album from './Pages/Assets/Components/Album';
 import imgliquidificador from "./Pages/Assets/img/default.png";
 import Carrossel from "./Pages/Assets/Components/Carrossel";
 import Card from "./Pages/Assets/Components/Card";
