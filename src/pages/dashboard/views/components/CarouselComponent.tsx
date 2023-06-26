@@ -1,7 +1,7 @@
 import React  from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import carrossel1 from "../../../../assets/images/carrossel/carrossel1.jpg";
+import carrossel1 from '../../../../assets/images/carrossel/carrossel1.jpg';
 import carrossel2 from '../../../../assets/images/carrossel/carrossel2.jpg';
 import carrossel3 from '../../../../assets/images/carrossel/carrossel3.jpg';
 
