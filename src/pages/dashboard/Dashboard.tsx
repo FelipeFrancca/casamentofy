@@ -12,7 +12,6 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
-import { Container } from "@mui/material";
 import { Outlet } from "react-router-dom";
 
 interface Props {
@@ -20,7 +19,15 @@ interface Props {
 }
 
 const drawerWidth = 240;
-const navItems = ["Início", "Nós", "CERIMÔNIA E RECEPÇÃO", "CONFIRMAÇÃO DE PRESENÇA", "LISTA DE PRESENTES", "RECADOS", "DRESS CODE",];
+const navItems = [
+  "Início",
+  "Nós",
+  "CERIMÔNIA E RECEPÇÃO",
+  "CONFIRMAÇÃO DE PRESENÇA",
+  "LISTA DE PRESENTES",
+  "RECADOS",
+  "DRESS CODE",
+];
 
 export default function DrawerAppBar(props: Props) {
   const { window } = props;
@@ -39,7 +46,7 @@ export default function DrawerAppBar(props: Props) {
       <List>
         {navItems.map((item) => (
           <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: "center"}}>
+            <ListItemButton sx={{ textAlign: "center" }}>
               <ListItemText primary={item} />
             </ListItemButton>
           </ListItem>
@@ -54,16 +61,16 @@ export default function DrawerAppBar(props: Props) {
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
-      <AppBar component="nav"
-      sx={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "stretch",
-        height: "100px",
-        paddingRight: "100px",
-        color: "#000",
-        background:"linear-gradient(to bottom, rgba(255, 255, 255, 1) 90%, rgba(255, 255, 255, 0))"
-      }}>
+      <AppBar
+        component="nav"
+        sx={{
+          justifyContent: "center",
+          height: "100px",
+          paddingRight: "100px",
+          color: "#000",
+          background: "#fff",
+        }}
+      >
         <Toolbar>
           <IconButton
             color="inherit"
@@ -91,9 +98,7 @@ export default function DrawerAppBar(props: Props) {
         </Toolbar>
       </AppBar>
       <main>
-        <Container>
           <Outlet />
-        </Container>
       </main>
     </Box>
   );

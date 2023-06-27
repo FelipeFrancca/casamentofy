@@ -7,17 +7,18 @@ function ButtonItem(props) {
   return (
     <Button
       sx={{
-        width: "150px",
+        width: "400px",
         height: "150px",
-        margin: "5px",
         display: "flex",
         textAlign: "center",
         fontWeight: 900,
         transition: "all 0.2s",
+        background: "#8c0dac",
 
         '&:hover': {
           border: "#fff solid 3px",
           transform: "scale(1.1)",
+          background: "#a308ca"
         }
       }}
       variant="contained"
@@ -34,7 +35,10 @@ const HomeButtom = (props) => {
       {props.disabled ? (
         <ButtonItem disabled >{props.label}</ButtonItem>
       ) : (
-        <ButtonItem color={`${props.color}`} {...other} >{props.label}</ButtonItem>
+        <ButtonItem sx={colorStyle} {...other}>
+          <IconComponent sx={{ color: "#fff" }} />
+          <span style={{ color: "black" }}>{props.label}</span>
+        </ButtonItem>
       )}
     </Box>
   );

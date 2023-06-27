@@ -9,15 +9,15 @@ const CarouselComponent: React.FC = () => {
 
     return (
       <div>
-        <Carousel autoPlay interval={2000} infiniteLoop showThumbs={false} >
+        <Carousel autoPlay interval={8000} infiniteLoop showThumbs={false} >
           <div>
-            <img src={carrossel1} alt="Imagem 1" width={800} height={600}/>
+            <img src={carrossel1} alt="Imagem 1" width={1000} height={800}/>
           </div>
           <div>
-            <img src={carrossel2} alt="Imagem 2" width={800} height={600} />
+            <img src={carrossel2} alt="Imagem 2" width={1000} height={800} />
           </div>
           <div>
-            <img src={carrossel3} alt="Imagem 3" width={800} height={600}/>
+            <img src={carrossel3} alt="Imagem 3" width={1000} height={800}/>
           </div>
         </Carousel>
       </div>
