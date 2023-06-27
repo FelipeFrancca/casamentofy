@@ -35,10 +35,7 @@ const HomeButtom = (props) => {
       {props.disabled ? (
         <ButtonItem disabled >{props.label}</ButtonItem>
       ) : (
-        <ButtonItem sx={colorStyle} {...other}>
-          <IconComponent sx={{ color: "#fff" }} />
-          <span style={{ color: "black" }}>{props.label}</span>
-        </ButtonItem>
+        <ButtonItem {...other} >{props.label}{props.CardGiftcardIcon}</ButtonItem>
       )}
     </Box>
   );
