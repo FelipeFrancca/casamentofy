@@ -3,7 +3,6 @@ import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import CssBaseline from "@mui/material/CssBaseline";
 import Divider from "@mui/material/Divider";
-import Drawer from "@mui/material/Drawer";
 import IconButton from "@mui/material/IconButton";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
@@ -17,15 +16,11 @@ import { Container } from "@mui/material";
 import { Outlet } from "react-router-dom";
 
 interface Props {
-  /**
-   * Injected by the documentation to work in an iframe.
-   * You won't need it on your project.
-   */
   window?: () => Window;
 }
 
 const drawerWidth = 240;
-const navItems = ["Home", "About", "Contact"];
+const navItems = ["Início", "Nós", "CERIMÔNIA E RECEPÇÃO", "CONFIRMAÇÃO DE PRESENÇA", "LISTA DE PRESENTES", "RECADOS", "DRESS CODE",];
 
 export default function DrawerAppBar(props: Props) {
   const { window } = props;
@@ -38,13 +33,13 @@ export default function DrawerAppBar(props: Props) {
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
       <Typography variant="h6" sx={{ my: 2 }}>
-        MUI
+        Felipe e Elina França
       </Typography>
       <Divider />
       <List>
         {navItems.map((item) => (
           <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: "center" }}>
+            <ListItemButton sx={{ textAlign: "center"}}>
               <ListItemText primary={item} />
             </ListItemButton>
           </ListItem>
@@ -59,7 +54,16 @@ export default function DrawerAppBar(props: Props) {
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
-      <AppBar component="nav">
+      <AppBar component="nav"
+      sx={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "stretch",
+        height: "100px",
+        paddingRight: "100px",
+        color: "#000",
+        background:"linear-gradient(to bottom, rgba(255, 255, 255, 1) 90%, rgba(255, 255, 255, 0))"
+      }}>
         <Toolbar>
           <IconButton
             color="inherit"
@@ -75,11 +79,11 @@ export default function DrawerAppBar(props: Props) {
             component="div"
             sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
           >
-            MUI
+            Felipe e Elina França
           </Typography>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {navItems.map((item) => (
-              <Button key={item} sx={{ color: "#fff" }}>
+              <Button key={item} sx={{ color: "#000" }}>
                 {item}
               </Button>
             ))}
@@ -87,37 +91,10 @@ export default function DrawerAppBar(props: Props) {
         </Toolbar>
       </AppBar>
       <main>
-        <Container sx={{ py: 8, marginTop: 3 }}>
-          {/**
-           * Local onde as Rotas vao ser renderizadas na aplicacao o resto permanece estatico.
-           * */}
+        <Container>
           <Outlet />
         </Container>
       </main>
-
-      <Box component="nav">
-        <Drawer
-          container={container}
-          variant="temporary"
-          open={mobileOpen}
-          onClose={handleDrawerToggle}
-          ModalProps={{
-            keepMounted: true, // Better open performance on mobile.
-          }}
-          sx={{
-            display: { xs: "block", sm: "none" },
-            "& .MuiDrawer-paper": {
-              boxSizing: "border-box",
-              width: drawerWidth,
-            },
-          }}
-        >
-          {drawer}
-        </Drawer>
-      </Box>
-      <Box component="main" sx={{ p: 3 }}>
-        <Toolbar />
-      </Box>
     </Box>
   );
 }
