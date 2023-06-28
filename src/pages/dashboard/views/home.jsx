@@ -8,10 +8,7 @@ import Nos1 from "../../../assets/images/nos/1.jpg";
 import Nos2 from "../../../assets/images/nos/2.jpg";
 import Nos3 from "../../../assets/images/nos/3.jpg";
 import Nos4 from "../../../assets/images/nos/4.jpg";
-<link
-  rel="stylesheet"
-  href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Roboto:wght@400;500;700;900&display=swap"
-/>;
+import Countdown from "./components/countdown";
 
 export default function Home() {
   const handleClick = () => {
@@ -34,7 +31,7 @@ export default function Home() {
       >
         <CarouselComponent />
       </Box>
-
+      <Countdown />
       <Box>
         <img
           src={Banner}
