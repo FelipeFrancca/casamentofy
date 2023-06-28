@@ -18,7 +18,7 @@ export default function Home() {
   };
 
   return (
-    <Box
+    <Box className="background"
       sx={{
         display: "flex",
         flexDirection: "column",
@@ -116,7 +116,7 @@ export default function Home() {
           alignItems: "center",
           flexWrap: "wrap",
           width: "100vw",
-          maxWidth: "50%",
+          maxWidth: "70%",
           marginTop: "30px",
           gap: 10,
         }}
@@ -272,6 +272,13 @@ export default function Home() {
       >
         <HomeButtom component={Link} to="/" label="Confirmar Presença" />
         <HomeButtom component={Link} to="/" label="Lista de Presentes" />
+      </Box>
+      <Box>
+        <img
+          src={LavandaG}
+          alt="Felipe e Elina"
+          style={{maxWidth: "800px", height: "auto", marginLeft: "-60rem", marginTop: "-500px"}}
+        />
       </Box>
     </Box>
   );

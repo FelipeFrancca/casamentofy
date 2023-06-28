@@ -32,7 +32,7 @@ const Countdown = () => {
   }, 1000);
 
   const buttonStyle = {
-    fontSize: "4vw",
+    fontSize: "3vw",
     marginTop: "15px",
     marginBottom: "15px",
   };

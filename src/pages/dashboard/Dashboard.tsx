@@ -69,6 +69,7 @@ export default function DrawerAppBar(props: Props) {
           paddingRight: "100px",
           color: "#fff",
           background: "#4F328C",
+          borderBottomRightRadius: "100px",
         }}
       >
         <Toolbar>
@@ -98,7 +99,7 @@ export default function DrawerAppBar(props: Props) {
         </Toolbar>
       </AppBar>
       <main>
-          <Outlet />
+        <Outlet />
       </main>
     </Box>
   );
