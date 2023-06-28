@@ -9,10 +9,12 @@ import Nos2 from "../../../assets/images/nos/2.jpg";
 import Nos3 from "../../../assets/images/nos/3.jpg";
 import Nos4 from "../../../assets/images/nos/4.jpg";
 import Countdown from "./components/countdown";
+import LavandaP from "../../../assets/images/lavanda/lavanda1.png";
+import LavandaG from "../../../assets/images/lavanda/lavanda2.png";
 
 export default function Home() {
   const handleClick = () => {
-    console.info("You clicked the Chip.");
+    console.info("Clicked");
   };
 
   return (
@@ -29,14 +31,14 @@ export default function Home() {
           marginBottom: "15px",
         }}
       >
-        <CarouselComponent />
+        <CarouselComponent/>
       </Box>
       <Countdown />
       <Box>
         <img
           src={Banner}
           alt="Felipe e Elina"
-          style={{ width: "700px", height: "auto" }}
+          style={{ maxWidth: "400px", height: "auto"}}
         />
       </Box>
 
@@ -100,6 +102,13 @@ export default function Home() {
           />
         </Stack>
       </Box>
+      <Box>
+        <img
+          src={LavandaP}
+          alt="Felipe e Elina"
+          style={{ maxWidth: "150px", height: "auto"}}
+        />
+      </Box>
       <Box
         sx={{
           display: "flex",
@@ -155,6 +164,13 @@ export default function Home() {
           />
         </Stack>
       </Box>
+      <Box>
+        <img
+          src={LavandaP}
+          alt="Felipe e Elina"
+          style={{ maxWidth: "150px", height: "auto"}}
+        />
+      </Box>
       <Box
         sx={{
           marginTop: "15px",
@@ -186,6 +202,13 @@ export default function Home() {
           />
         </Stack>
       </Box>
+      <Box>
+        <img
+          src={LavandaP}
+          alt="Felipe e Elina"
+          style={{ maxWidth: "150px", height: "auto"}}
+        />
+      </Box>
       <Box
         sx={{
           marginTop: "15px",
@@ -216,6 +239,13 @@ export default function Home() {
             }}
           />
         </Stack>
+      </Box>
+      <Box>
+        <img
+          src={LavandaP}
+          alt="Felipe e Elina"
+          style={{ maxWidth: "150px", height: "auto"}}
+        />
       </Box>
       <Box
         sx={{

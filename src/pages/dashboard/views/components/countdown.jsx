@@ -1,4 +1,3 @@
-import { Box } from "@mui/material";
 import HomeButtom from "./homeButton";
 
 const Countdown = () => {
@@ -33,7 +32,7 @@ const Countdown = () => {
   }, 1000);
 
   const buttonStyle = {
-    fontSize: "50px",
+    fontSize: "4vw",
     marginTop: "15px",
     marginBottom: "15px",
   };

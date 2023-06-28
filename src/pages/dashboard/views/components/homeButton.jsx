@@ -7,8 +7,6 @@ function ButtonItem(props) {
   return (
     <Button
       sx={{
-        width: "300px",
-        height: "100px",
         display: "flex",
         textAlign: "center",
         fontWeight: 900,
