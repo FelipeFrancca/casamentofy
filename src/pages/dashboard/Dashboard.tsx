@@ -67,8 +67,8 @@ export default function DrawerAppBar(props: Props) {
           justifyContent: "center",
           height: "100px",
           paddingRight: "100px",
-          color: "#000",
-          background: "#fff",
+          color: "#fff",
+          background: "#4F328C",
         }}
       >
         <Toolbar>
@@ -90,7 +90,7 @@ export default function DrawerAppBar(props: Props) {
           </Typography>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {navItems.map((item) => (
-              <Button key={item} sx={{ color: "#000" }}>
+              <Button key={item} sx={{ color: "#fff" }}>
                 {item}
               </Button>
             ))}

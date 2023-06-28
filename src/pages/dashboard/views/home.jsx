@@ -1,10 +1,20 @@
 import React from "react";
 import HomeButtom from "./components/homeButton";
-import { Box, Typography } from "@mui/material";
+import { Box, Chip, Stack, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 import CarouselComponent from "./components/CarouselComponent.tsx";
+import Banner from "../../../assets/images/banner.png";
+import Nos1 from "../../../assets/images/nos/1.jpg";
+import Nos2 from "../../../assets/images/nos/2.jpg";
+import Nos3 from "../../../assets/images/nos/3.jpg";
+import Nos4 from "../../../assets/images/nos/4.jpg";
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Roboto:wght@400;500;700;900&display=swap"/>;
 
 export default function Home() {
+  const handleClick = () => {
+    console.info("You clicked the Chip.");
+  };
+
   return (
     <Box
       sx={{
@@ -16,16 +26,25 @@ export default function Home() {
       <Box
         sx={{
           marginTop: "15px",
-          marginBottom: "15px"
+          marginBottom: "15px",
         }}
       >
         <CarouselComponent />
       </Box>
+
+      <Box>
+        <img
+          src={Banner}
+          alt="Felipe e Elina"
+          style={{ width: "700px", height: "auto" }}
+        />
+      </Box>
+
       <Box
         sx={{
           marginTop: "15px",
           marginBottom: "15px",
-          maxWidth: "50%",
+          maxWidth: "70%",
           textAlign: "center",
         }}
       >
@@ -55,32 +74,80 @@ export default function Home() {
           Esperamos que esse seja apenas o início de uma jornada incrível, onde
           possamos compartilhar muitos outros momentos memoráveis juntos. Agora,
           vamos juntos celebrar o amor e aproveitar cada instante dessa jornada
-          emocionante! <br/> Com amor, Sr. & Sra. França
+          emocionante! <br /> Com amor, Sr. & Sra. França.
         </Typography>
+      </Box>
+
+      <Box
+        sx={{
+          marginTop: "15px",
+          marginBottom: "15px",
+        }}
+      >
+        <Stack>
+          <Chip
+            label="Nós"
+            variant="outlined"
+            onClick={handleClick}
+            baseClassName="Dancing-Script"
+            sx={{
+              width: "100px",
+              height: "35px",
+              fontSize: "17px",
+              fontWeight: "700",
+              border: "solid 2px #617322"
+            }}
+          />
+        </Stack>
       </Box>
       <Box
         sx={{
           display: "flex",
-          flexDirection: "column",
           justifyContent: "space-around",
           alignItems: "center",
           flexWrap: "wrap",
           width: "100vw",
-          maxWidth: "80%",
+          maxWidth: "50%",
           marginTop: "30px",
           gap: 10,
         }}
       >
-        <HomeButtom
-          component={Link}
-          to="/"
-          label="Confirmar Presença"
-        />
-        <HomeButtom
-          component={Link}
-          to="/"
-          label="Lista de Presentes"
-        />
+          <img
+            src={Nos1}
+            alt="Felipe e Elina"
+            style={{ width: "400px", height: "auto" }}
+          />
+          <img
+            src={Nos2}
+            alt="Felipe e Elina"
+            style={{ width: "400px", height: "auto" }}
+          />
+          <img
+            src={Nos3}
+            alt="Felipe e Elina"
+            style={{ width: "400px", height: "auto" }}
+          />
+          <img
+            src={Nos4}
+            alt="Felipe e Elina"
+            style={{ width: "400px", height: "auto" }}
+          />
+        </Box>
+
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "space-around",
+          alignItems: "center",
+          flexWrap: "wrap",
+          width: "100vw",
+          maxWidth: "50%",
+          marginTop: "30px",
+          gap: 10,
+        }}
+      >
+        <HomeButtom component={Link} to="/" label="Confirmar Presença" />
+        <HomeButtom component={Link} to="/" label="Lista de Presentes" />
       </Box>
     </Box>
   );

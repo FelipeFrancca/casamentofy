@@ -7,18 +7,20 @@ function ButtonItem(props) {
   return (
     <Button
       sx={{
-        width: "400px",
-        height: "150px",
+        width: "300px",
+        height: "100px",
         display: "flex",
         textAlign: "center",
         fontWeight: 900,
+        fontSize: "18px",
         transition: "all 0.2s",
-        background: "#8c0dac",
+        background: "#B189D9",
+        
 
         '&:hover': {
           border: "#fff solid 3px",
           transform: "scale(1.1)",
-          background: "#a308ca"
+          background: "#4F328C"
         }
       }}
       variant="contained"
