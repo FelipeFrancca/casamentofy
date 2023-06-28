@@ -8,7 +8,10 @@ import Nos1 from "../../../assets/images/nos/1.jpg";
 import Nos2 from "../../../assets/images/nos/2.jpg";
 import Nos3 from "../../../assets/images/nos/3.jpg";
 import Nos4 from "../../../assets/images/nos/4.jpg";
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Roboto:wght@400;500;700;900&display=swap"/>;
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Roboto:wght@400;500;700;900&display=swap"
+/>;
 
 export default function Home() {
   const handleClick = () => {
@@ -95,7 +98,7 @@ export default function Home() {
               height: "35px",
               fontSize: "17px",
               fontWeight: "700",
-              border: "solid 2px #617322"
+              border: "solid 2px #617322",
             }}
           />
         </Stack>
@@ -112,27 +115,121 @@ export default function Home() {
           gap: 10,
         }}
       >
-          <img
-            src={Nos1}
-            alt="Felipe e Elina"
-            style={{ width: "400px", height: "auto" }}
+        <img
+          src={Nos1}
+          alt="Felipe e Elina"
+          style={{ width: "400px", height: "auto" }}
+        />
+        <img
+          src={Nos2}
+          alt="Felipe e Elina"
+          style={{ width: "400px", height: "auto" }}
+        />
+        <img
+          src={Nos3}
+          alt="Felipe e Elina"
+          style={{ width: "400px", height: "auto" }}
+        />
+        <img
+          src={Nos4}
+          alt="Felipe e Elina"
+          style={{ width: "400px", height: "auto" }}
+        />
+      </Box>
+
+      <Box
+        sx={{
+          marginTop: "30px",
+          marginBottom: "15px",
+        }}
+      >
+        <Stack>
+          <Chip
+            label="CERIMÔNIA E RECEPÇÃO"
+            variant="outlined"
+            onClick={handleClick}
+            baseClassName="Dancing-Script"
+            sx={{
+              height: "35px",
+              fontSize: "17px",
+              fontWeight: "700",
+              border: "solid 2px #617322",
+            }}
           />
-          <img
-            src={Nos2}
-            alt="Felipe e Elina"
-            style={{ width: "400px", height: "auto" }}
+        </Stack>
+      </Box>
+      <Box
+        sx={{
+          marginTop: "15px",
+          marginBottom: "15px",
+          maxWidth: "70%",
+          textAlign: "center",
+        }}
+      >
+        <Typography>Em construção</Typography>
+      </Box>
+      <Box
+        sx={{
+          marginTop: "15px",
+          marginBottom: "15px",
+        }}
+      >
+        <Stack>
+          <Chip
+            label="RECADOS"
+            variant="outlined"
+            onClick={handleClick}
+            baseClassName="Dancing-Script"
+            sx={{
+              height: "35px",
+              fontSize: "17px",
+              fontWeight: "700",
+              border: "solid 2px #617322",
+            }}
           />
-          <img
-            src={Nos3}
-            alt="Felipe e Elina"
-            style={{ width: "400px", height: "auto" }}
+        </Stack>
+      </Box>
+      <Box
+        sx={{
+          marginTop: "15px",
+          marginBottom: "15px",
+          maxWidth: "70%",
+          textAlign: "center",
+        }}
+      >
+        <Typography>Em construção</Typography>
+      </Box>
+      <Box
+        sx={{
+          marginTop: "15px",
+          marginBottom: "15px",
+        }}
+      >
+        <Stack sx={{}}>
+          <Chip
+            label="DRESS CODE"
+            variant="outlined"
+            onClick={handleClick}
+            baseClassName="Dancing-Script"
+            sx={{
+              height: "35px",
+              fontSize: "17px",
+              fontWeight: "700",
+              border: "solid 2px #617322",
+            }}
           />
-          <img
-            src={Nos4}
-            alt="Felipe e Elina"
-            style={{ width: "400px", height: "auto" }}
-          />
-        </Box>
+        </Stack>
+      </Box>
+      <Box
+        sx={{
+          marginTop: "15px",
+          marginBottom: "15px",
+          maxWidth: "70%",
+          textAlign: "center",
+        }}
+      >
+        <Typography>Em construção</Typography>
+      </Box>
 
       <Box
         sx={{
