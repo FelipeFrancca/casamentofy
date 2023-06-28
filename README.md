@@ -1,2 +1,1 @@
-# prosipe-status
-Sistema para a verificação do status de funcionamento dos PROSIPEs operantes
+Site pessoal desenvolvido em JavaScript com React.js para meu casamento realizado em setembro de 2023.
