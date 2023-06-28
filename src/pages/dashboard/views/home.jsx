@@ -11,6 +11,7 @@ import Nos4 from "../../../assets/images/nos/4.jpg";
 import Countdown from "./components/countdown";
 import LavandaP from "../../../assets/images/lavanda/lavanda1.png";
 import LavandaG from "../../../assets/images/lavanda/lavanda2.png";
+import GoogleMaps from "./components/googleMaps";
 
 export default function Home() {
   const handleClick = () => {
@@ -170,16 +171,6 @@ export default function Home() {
           alt="Felipe e Elina"
           style={{ maxWidth: "150px", height: "auto"}}
         />
-      </Box>
-      <Box
-        sx={{
-          marginTop: "15px",
-          marginBottom: "15px",
-          maxWidth: "70%",
-          textAlign: "center",
-        }}
-      >
-        <Typography>Em construção</Typography>
       </Box>
       <Box
         sx={{
