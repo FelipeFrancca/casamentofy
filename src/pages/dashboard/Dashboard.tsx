@@ -106,6 +106,10 @@ export default function DrawerAppBar(props: Props) {
           color: "#fff",
           background: "#4F328C",
           borderBottomRightRadius: "100px",
+          
+          "@media (max-width: 768px)": {
+            height: "60px",
+          },
         }}
       >
         <Toolbar>
@@ -140,6 +144,7 @@ export default function DrawerAppBar(props: Props) {
           </Box>
         </Toolbar>
       </AppBar>
+      
       <main>
         <Outlet />
       </main>

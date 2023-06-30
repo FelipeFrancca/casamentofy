@@ -42,7 +42,6 @@ export default function Home() {
       >
         <CarouselComponent />
       </Box>
-      <Countdown />
       <Box>
         <img
           src={Banner}
@@ -50,6 +49,8 @@ export default function Home() {
           style={{ maxWidth: "400px", height: "auto" }}
         />
       </Box>
+
+      <Countdown />
 
       <Box
         sx={{
