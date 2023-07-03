@@ -301,7 +301,7 @@ export default function Home() {
           gap: 10,
         }}
       >
-        <HomeButtom component={Link} to="/" label="Confirmar Presença" />
+        <HomeButtom component={Link} to="https://docs.google.com/forms/d/e/1FAIpQLSc4_5rHb2sPey4oyZcU1OL6fac3rIoSS_PDjVEuUAyyUhgW9A/viewform" label="Confirmar Presença" />
         <HomeButtom component={Link} to="https://docs.google.com/forms/d/e/1FAIpQLSfxmcMkhXZl9pjb-c0wtY4XnPSs-5jhZkqklrIWiWuk78zLRA/viewform" label="Lista de Presentes" />
       </Box>
       <Box ref={confirmacaoRef}>
