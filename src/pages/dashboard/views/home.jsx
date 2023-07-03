@@ -302,7 +302,7 @@ export default function Home() {
         }}
       >
         <HomeButtom component={Link} to="/" label="Confirmar Presença" />
-        <HomeButtom component={Link} to="/" label="Lista de Presentes" />
+        <HomeButtom component={Link} to="https://docs.google.com/forms/d/e/1FAIpQLSfxmcMkhXZl9pjb-c0wtY4XnPSs-5jhZkqklrIWiWuk78zLRA/viewform" label="Lista de Presentes" />
       </Box>
       <Box ref={confirmacaoRef}>
         <img
