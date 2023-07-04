@@ -13,6 +13,7 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import { Outlet } from "react-router-dom";
+import { Container } from "@mui/material";
 
 interface Props {
   window?: () => Window;
@@ -95,14 +96,15 @@ export default function DrawerAppBar(props: Props) {
     window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: "flex" }}>
+    <Box sx={{
+      display: "flex",
+      }}>
       <CssBaseline />
       <AppBar
         component="nav"
         sx={{
           justifyContent: "center",
           height: "80px",
-          paddingRight: "100px",
           color: "#fff",
           background: "#4F328C",
           borderBottomRightRadius: "100px",
@@ -127,7 +129,7 @@ export default function DrawerAppBar(props: Props) {
             component="div"
             sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
           >
-            Felipe e Elina França
+            Elina e Felipe França
           </Typography>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {navItems.map((item) => (

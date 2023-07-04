@@ -27,17 +27,26 @@ export default function Home() {
   const dressRef = useRef(null);
 
   return (
-    <Box ref={inicioRef}
+    <Box
+      ref={inicioRef}
       sx={{
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
+        justifyContent: "center",
+        maxWidth: "98.4vw",
+
+        "@media (max-width: 768px)": {
+          marginBottom: "-120px",
+          maxWidth: "100%",
+        },
       }}
     >
       <Box
         sx={{
-          marginTop: "15px",
-          marginBottom: "15px",
+          "@media (max-width: 768px)": {
+            marginBottom: "-120px",
+          },
         }}
       >
         <CarouselComponent />
@@ -72,7 +81,8 @@ export default function Home() {
         </Typography>
       </Box>
 
-      <Box ref={osNoivosRef}
+      <Box
+        ref={osNoivosRef}
         sx={{
           marginTop: "15px",
           marginBottom: "15px",
@@ -135,26 +145,43 @@ export default function Home() {
         <img
           src={Nos1}
           alt="Felipe e Elina"
-          style={{ width: "400px", height: "auto", border: "solid 6px #617322", }}
+          style={{
+            width: "400px",
+            height: "auto",
+            border: "solid 6px #617322",
+          }}
         />
         <img
           src={Nos2}
           alt="Felipe e Elina"
-          style={{ width: "400px", height: "auto", border: "solid 6px #617322", }}
+          style={{
+            width: "400px",
+            height: "auto",
+            border: "solid 6px #617322",
+          }}
         />
         <img
           src={Nos3}
           alt="Felipe e Elina"
-          style={{ width: "400px", height: "auto", border: "solid 6px #617322", }}
+          style={{
+            width: "400px",
+            height: "auto",
+            border: "solid 6px #617322",
+          }}
         />
         <img
           src={Nos4}
           alt="Felipe e Elina"
-          style={{ width: "400px", height: "auto", border: "solid 6px #617322", }}
+          style={{
+            width: "400px",
+            height: "auto",
+            border: "solid 6px #617322",
+          }}
         />
       </Box>
 
-      <Box ref={cerimoniaRef}
+      <Box
+        ref={cerimoniaRef}
         sx={{
           marginTop: "30px",
           marginBottom: "15px",
@@ -193,12 +220,15 @@ export default function Home() {
       >
         <Typography>
           Nossa cerimônia vai ocorrer ás 16h da tarde, aconselhamos que cheguem
-          30 minutos antes, pois a noiva não irá se atrasar. <br/>
-          A recepção será no mesmo endereço, Chácara Bela Vista RN, proximo ao Jiqui Country Club. <br/>
-          <br/>
-          Contamos com sua presença, para testemunhar a benção de Deus sob a nossa união.
-          <br/>Não esqueça da confirmação! Por gentileza, coloquem o CPF na observação para
-          liberação na portaria do local.
+          30 minutos antes, pois a noiva não irá se atrasar. <br />
+          A recepção será no mesmo endereço, Chácara Bela Vista RN, proximo ao
+          Jiqui Country Club. <br />
+          <br />
+          Contamos com sua presença, para testemunhar a benção de Deus sob a
+          nossa união.
+          <br />
+          Não esqueça da confirmação! Por gentileza, coloquem o CPF na
+          observação para liberação na portaria do local.
         </Typography>
       </Box>
 
@@ -212,7 +242,8 @@ export default function Home() {
         <Maps />
       </Box>
 
-      <Box ref={recadosRef}
+      <Box
+        ref={recadosRef}
         sx={{
           marginTop: "15px",
           marginBottom: "15px",
@@ -250,7 +281,8 @@ export default function Home() {
       >
         <Typography>Em construção</Typography>
       </Box>
-      <Box ref={dressRef}
+      <Box
+        ref={dressRef}
         sx={{
           marginTop: "15px",
           marginBottom: "15px",
@@ -289,7 +321,8 @@ export default function Home() {
         <Typography>Em construção</Typography>
       </Box>
 
-      <Box ref={listaRef}
+      <Box
+        ref={listaRef}
         sx={{
           display: "flex",
           justifyContent: "space-around",
@@ -301,8 +334,16 @@ export default function Home() {
           gap: 10,
         }}
       >
-        <HomeButtom component={Link} to="https://docs.google.com/forms/d/e/1FAIpQLSc4_5rHb2sPey4oyZcU1OL6fac3rIoSS_PDjVEuUAyyUhgW9A/viewform" label="Confirmar Presença" />
-        <HomeButtom component={Link} to="https://docs.google.com/forms/d/e/1FAIpQLSfxmcMkhXZl9pjb-c0wtY4XnPSs-5jhZkqklrIWiWuk78zLRA/viewform" label="Lista de Presentes" />
+        <HomeButtom
+          component={Link}
+          to="https://docs.google.com/forms/d/e/1FAIpQLSc4_5rHb2sPey4oyZcU1OL6fac3rIoSS_PDjVEuUAyyUhgW9A/viewform"
+          label="Confirmar Presença"
+        />
+        <HomeButtom
+          component={Link}
+          to="https://docs.google.com/forms/d/e/1FAIpQLSfxmcMkhXZl9pjb-c0wtY4XnPSs-5jhZkqklrIWiWuk78zLRA/viewform"
+          label="Lista de Presentes"
+        />
       </Box>
       <Box ref={confirmacaoRef}>
         <img
