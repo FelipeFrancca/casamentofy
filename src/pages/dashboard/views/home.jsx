@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import HomeButtom from "./components/homeButton";
 import { Box, Chip, Stack, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
@@ -17,18 +17,8 @@ export default function Home() {
   const handleClick = () => {
     console.info("Clicked");
   };
-
-  const inicioRef = useRef(null);
-  const osNoivosRef = useRef(null);
-  const cerimoniaRef = useRef(null);
-  const confirmacaoRef = useRef(null);
-  const listaRef = useRef(null);
-  const recadosRef = useRef(null);
-  const dressRef = useRef(null);
-
   return (
     <Box
-      ref={inicioRef}
       sx={{
         display: "flex",
         flexDirection: "column",
@@ -42,6 +32,7 @@ export default function Home() {
         },
       }}
     >
+      <section id="inicio"></section>
       <Box
         sx={{
           "@media (max-width: 768px)": {
@@ -55,7 +46,7 @@ export default function Home() {
         <img
           src={Banner}
           alt="Felipe e Elina"
-          style={{ maxWidth: "400px", height: "auto" }}
+          style={{ maxWidth: "500px", height: "auto" }}
         />
       </Box>
 
@@ -75,19 +66,18 @@ export default function Home() {
           o dia mais incrível de nossas vidas já começou, e queremos vivenciar
           esse momento especial em que nossa união será abençoada diante de Deus
           ao lado de vocês!
-          <br />
+          <section id="osnoivos"></section> <br />
           Estamos ansiosos pela presença de cada um de vocês em nosso casamento.
           Será um dia repleto de amor, alegria e memórias inesquecíveis.
         </Typography>
       </Box>
-
       <Box
-        ref={osNoivosRef}
         sx={{
           marginTop: "15px",
           marginBottom: "15px",
         }}
       >
+      
         <Stack>
           <Chip
             label="Os Noivos"
@@ -177,11 +167,13 @@ export default function Home() {
             height: "auto",
             border: "solid 6px #617322",
           }}
+          
         />
       </Box>
-
+      <Box>
+      <section id="cerimonia"></section>
+      </Box>
       <Box
-        ref={cerimoniaRef}
         sx={{
           marginTop: "30px",
           marginBottom: "15px",
@@ -227,8 +219,7 @@ export default function Home() {
           Contamos com sua presença, para testemunhar a benção de Deus sob a
           nossa união.
           <br />
-          Não esqueça da confirmação! Por gentileza, coloquem o CPF na
-          observação para liberação na portaria do local.
+          Não esqueça da confirmação! Por gentileza, coloquem o CPF para liberação na portaria do local.
         </Typography>
       </Box>
 
@@ -240,49 +231,9 @@ export default function Home() {
         }}
       >
         <Maps />
-      </Box>
-
-      <Box
-        ref={recadosRef}
-        sx={{
-          marginTop: "15px",
-          marginBottom: "15px",
-        }}
-      >
-        <Stack>
-          <Chip
-            label="RECADOS"
-            variant="outlined"
-            onClick={handleClick}
-            baseClassName="Dancing-Script"
-            sx={{
-              height: "35px",
-              fontSize: "17px",
-              fontWeight: "700",
-              border: "solid 2px #617322",
-            }}
-          />
-        </Stack>
-      </Box>
-      <Box>
-        <img
-          src={LavandaP}
-          alt="Felipe e Elina"
-          style={{ maxWidth: "150px", height: "auto", marginTop: "-15px" }}
-        />
+        <section id="vestimenta"></section>
       </Box>
       <Box
-        sx={{
-          marginTop: "15px",
-          marginBottom: "15px",
-          maxWidth: "70%",
-          textAlign: "center",
-        }}
-      >
-        <Typography>Em construção</Typography>
-      </Box>
-      <Box
-        ref={dressRef}
         sx={{
           marginTop: "15px",
           marginBottom: "15px",
@@ -290,7 +241,7 @@ export default function Home() {
       >
         <Stack sx={{}}>
           <Chip
-            label="DRESS CODE"
+            label="VESTIMENTA"
             variant="outlined"
             onClick={handleClick}
             baseClassName="Dancing-Script"
@@ -321,8 +272,9 @@ export default function Home() {
         <Typography>Em construção</Typography>
       </Box>
 
+      <section id="lista"></section>
+      <section id="confimacao"></section>
       <Box
-        ref={listaRef}
         sx={{
           display: "flex",
           justifyContent: "space-around",
@@ -345,7 +297,7 @@ export default function Home() {
           label="Lista de Presentes"
         />
       </Box>
-      <Box ref={confirmacaoRef}>
+      <Box>
         <img
           src={LavandaG}
           alt="Felipe e Elina"

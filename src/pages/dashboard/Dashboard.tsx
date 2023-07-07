@@ -5,15 +5,10 @@ import CssBaseline from "@mui/material/CssBaseline";
 import Divider from "@mui/material/Divider";
 import IconButton from "@mui/material/IconButton";
 import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemText from "@mui/material/ListItemText";
 import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
 import { Outlet } from "react-router-dom";
-import { Container } from "@mui/material";
 
 interface Props {
   window?: () => Window;
@@ -21,15 +16,6 @@ interface Props {
 }
 
 const drawerWidth = 240;
-const navItems = [
-  { title: "Início", sectionId: "inicio" },
-  { title: "Os Noivos", sectionId: "osNoivos" },
-  { title: "CERIMÔNIA E RECEPÇÃO", sectionId: "cerimonia" },
-  { title: "CONFIRMAÇÃO DE PRESENÇA", sectionId: "confirmacao" },
-  { title: "LISTA DE PRESENTES", sectionId: "lista" },
-  { title: "RECADOS", sectionId: "recados" },
-  { title: "DRESS CODE", sectionId: "dress" },
-];
 
 export default function DrawerAppBar(props: Props) {
   const { window, refs } = props;
@@ -47,21 +33,6 @@ export default function DrawerAppBar(props: Props) {
     }
   };
 
-  const sections = [
-    {
-      title: "Seção 1",
-      items: navItems.slice(0, 3),
-    },
-    {
-      title: "Seção 2",
-      items: navItems.slice(3, 6), // Defina aqui os itens que deseja na segunda seção
-    },
-    {
-      title: "Seção 3",
-      items: navItems.slice(6), // Defina aqui os itens que deseja na terceira seção
-    },
-  ];
-
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
       <Typography variant="h6" sx={{ my: 2 }}>
@@ -69,25 +40,7 @@ export default function DrawerAppBar(props: Props) {
       </Typography>
       <Divider />
       <List>
-        {sections.map((section) => (
-          <div key={section.title}>
-            <Typography variant="subtitle1" sx={{ my: 1 }}>
-              {section.title}
-            </Typography>
-            {section.items.map((item) => (
-              <ListItem key={item.title} disablePadding>
-                <ListItemButton
-                  sx={{ textAlign: "center" }}
-                  onClick={() =>
-                    scrollToSection(item.sectionId.toLowerCase().replace(/ /g, ""))
-                  }
-                >
-                  <ListItemText primary={item.title} />
-                </ListItemButton>
-              </ListItem>
-            ))}
-          </div>
-        ))}
+        
       </List>
     </Box>
   );
@@ -131,18 +84,17 @@ export default function DrawerAppBar(props: Props) {
           >
             Elina e Felipe França
           </Typography>
-          <Box sx={{ display: { xs: "none", sm: "block" } }}>
-            {navItems.map((item) => (
-              <Button
-                key={item.title}
-                sx={{ color: "#fff" }}
-                onClick={() =>
-                  scrollToSection(item.sectionId.toLowerCase().replace(/ /g, ""))
-                }
-              >
-                {item.title}
-              </Button>
-            ))}
+          <Box  sx={{ display: { xs: "none", sm: "block" } }}>
+        <nav>
+          <ul style={{ listStyle: "none", display: "flex", justifyContent: "center", alignItems: "center" , gap: "0.75rem", }}>
+            <li><a style={{ textDecoration: "none", color: "#fff", fontWeight: "700", textTransform: "uppercase" }} href="#inicio">Ínicio</a></li>
+            <li><a style={{ textDecoration: "none", color: "#fff", fontWeight: "700", textTransform: "uppercase" }} href="#osnoivos">Os Noivos</a></li>
+            <li><a style={{ textDecoration: "none", color: "#fff", fontWeight: "700", textTransform: "uppercase" }} href="#cerimonia">Cerimônia e Recepção</a></li>
+            <li><a style={{ textDecoration: "none", color: "#fff", fontWeight: "700", textTransform: "uppercase" }} href="#vestimenta">Vestimenta</a></li>
+            <li><a style={{ textDecoration: "none", color: "#fff", fontWeight: "700", textTransform: "uppercase" }} href="#confimacao">Confirmação de Presença</a></li>
+            <li><a style={{ textDecoration: "none", color: "#fff", fontWeight: "700", textTransform: "uppercase" }} href="#lista">Lista de Presentes</a></li>
+          </ul>
+        </nav>
           </Box>
         </Toolbar>
       </AppBar>

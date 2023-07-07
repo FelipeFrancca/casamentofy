@@ -1,18 +1,19 @@
-import { Button } from "@mui/material";
+import { Button, Box } from "@mui/material";
 import React from "react";
 import { Link } from "react-router-dom";
 
+import bannerNotF from "../../../assets/images/bannerNotF.jpg";
 import "../../../assets/styles/NotFound.css";
 
 
 const NotFound = (props) => {
   return (
-    <div>
-      <h1 className="error404">Erro 404</h1>
-      <h2 className="textNotfound">Vish, página não encontrada</h2>
-      <h3 className="textNotfound">Talvez você tenha inserido um link faltando informações ou que não existe neste site.</h3>
+    <Box sx={{display: "flex", alignItems: "center", flexDirection: "column", gap: 4}}>
+      <h1 className="textNotfound">Oxi, página não encontrada 🤔</h1>
+      <h2 className="textNotfound">Ta indo longe demais meu parceiro, seu link deve esta faltando informações ou não existe neste site.</h2>
+      <img src={bannerNotF} alt="O banner não foi encontrado" style={{width: "25rem"}}/>
       <Button variant="contained" component={Link} to="/" >Voltar a tela inicial</Button>
-    </div>
+    </Box>
   );
 };
 
