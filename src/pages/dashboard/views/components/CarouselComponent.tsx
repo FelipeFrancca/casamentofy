@@ -13,8 +13,8 @@ const CarouselComponent: React.FC = () => {
       sx={{
         display: "flex",
         alignItems: "end",
-        width: "100vw",
-        height: "70vh",  
+        width: "100%",
+        height: "100vh",  
         overflow: "hidden",
         backgroundSize: "cover",
         "@media (max-width: 768px)": {

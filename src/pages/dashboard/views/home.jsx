@@ -18,45 +18,56 @@ export default function Home() {
     console.info("Clicked");
   };
   return (
+  <Box
+  sx={{
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    flexDirection: "column",
+    width: "99vw",
+    "@media (max-width: 768px)": {
+      width: "100vw"
+    }
+  }}
+  >
+  <section id="inicio"></section>
+  <Box
+  sx={{
+    marginBottom: "30px",
+    "@media (max-width: 768px)": {
+      marginBottom: "-150px"
+    },
+  }}
+  >
+  <CarouselComponent/>
+  </Box>
     <Box
       sx={{
         display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
         justifyContent: "center",
-        maxWidth: "98.4vw",
-
-        "@media (max-width: 768px)": {
-          marginBottom: "-120px",
-          maxWidth: "100%",
-        },
+        alignItems: "center",
+        flexDirection: "column",
+        maxWidth: "90%",
       }}
     >
-      <section id="inicio"></section>
-      <Box
-        sx={{
-          "@media (max-width: 768px)": {
-            marginBottom: "-120px",
-          },
-        }}
-      >
-        <CarouselComponent />
-      </Box>
+    
       <Box>
         <img
           src={Banner}
           alt="Felipe e Elina"
-          style={{ maxWidth: "500px", height: "auto" }}
+          style={{ maxWidth: "300px", height: "auto" }}
         />
       </Box>
 
-      <Countdown />
+      <Box>
+      <Countdown/>
+      </Box>
 
       <Box
         sx={{
           marginTop: "15px",
           marginBottom: "15px",
-          maxWidth: "50%",
+          maxWidth: "60%",
           textAlign: "center",
         }}
       >
@@ -136,7 +147,7 @@ export default function Home() {
           src={Nos1}
           alt="Felipe e Elina"
           style={{
-            width: "400px",
+            width: "300px",
             height: "auto",
             border: "solid 6px #617322",
           }}
@@ -145,7 +156,7 @@ export default function Home() {
           src={Nos2}
           alt="Felipe e Elina"
           style={{
-            width: "400px",
+            width: "300px",
             height: "auto",
             border: "solid 6px #617322",
           }}
@@ -154,7 +165,7 @@ export default function Home() {
           src={Nos3}
           alt="Felipe e Elina"
           style={{
-            width: "400px",
+            width: "300px",
             height: "auto",
             border: "solid 6px #617322",
           }}
@@ -163,7 +174,7 @@ export default function Home() {
           src={Nos4}
           alt="Felipe e Elina"
           style={{
-            width: "400px",
+            width: "300px",
             height: "auto",
             border: "solid 6px #617322",
           }}
@@ -309,6 +320,7 @@ export default function Home() {
           }}
         />
       </Box>
+    </Box>
     </Box>
   );
 }

@@ -21,32 +21,28 @@ const Countdown = () => {
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
     // Output the result in an element with id="demo"
-    document.getElementById("days").innerHTML =
-      days + "D ";
+    document.getElementById("days").innerHTML = days + "D ";
 
     // If the count down is over, write some text
     if (distance < 0) {
       clearInterval(x);
       document.getElementById("days").innerHTML = "EXPIRED";
     }
-    document.getElementById("hours").innerHTML =
-      hours + "H ";
+    document.getElementById("hours").innerHTML = hours + "H ";
 
     // If the count down is over, write some text
     if (distance < 0) {
       clearInterval(x);
       document.getElementById("hours").innerHTML = "EXPIRED";
     }
-    document.getElementById("min").innerHTML =
-      minutes + "Min ";
+    document.getElementById("min").innerHTML = minutes + "Min ";
 
     // If the count down is over, write some text
     if (distance < 0) {
       clearInterval(x);
       document.getElementById("min").innerHTML = "EXPIRED";
     }
-    document.getElementById("sec").innerHTML =
-      seconds + "S ";
+    document.getElementById("sec").innerHTML = seconds + "S ";
 
     // If the count down is over, write some text
     if (distance < 0) {
@@ -56,33 +52,28 @@ const Countdown = () => {
   }, 1000);
 
   const buttonStyle = {
-    fontSize: "50px",
+    fontSize: "125%",
     marginTop: "15px",
     marginBottom: "15px",
   };
 
-  return <div style={{display: "flex", flexDirection: "row", gap: 14}}>
-    <HomeButtom
-  style={buttonStyle}
-  id="days"
-  />
-  <HomeButtom
-  style={buttonStyle}
-  id="hours"
-  />
-  
-  <HomeButtom
-  style={buttonStyle}
-  id="min"
-  />
-  
-  <HomeButtom
-  style={buttonStyle}
-  id="sec"
-  />
-  
-  </div>
+  return (
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "row",
+        gap: 14,
+      }}
+    >
+      <HomeButtom style={buttonStyle} id="days" />
 
+      <HomeButtom style={buttonStyle} id="hours" />
+
+      <HomeButtom style={buttonStyle} id="min" />
+
+      <HomeButtom style={buttonStyle} id="sec" />
+    </div>
+  );
 };
 
 export default Countdown;

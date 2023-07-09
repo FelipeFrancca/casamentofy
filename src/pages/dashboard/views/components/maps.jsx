@@ -6,8 +6,8 @@ const Mapa = () => {
     <Box>
       <iframe
         title="Mapa de geolocalização para o endereço do evento"
-        width="400px"
-        height="400px"
+        width="300px"
+        height="300px"
         style={{ border: "0" }}
         loading="lazy"
         allowfullscreen
