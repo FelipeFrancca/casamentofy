@@ -13,25 +13,24 @@ const CarouselComponent: React.FC = () => {
       sx={{
         display: "flex",
         alignItems: "end",
-        width: "100%",
-        height: "100vh",  
+        width: "100%",  
         overflow: "hidden",
         backgroundSize: "cover",
         "@media (max-width: 768px)": {
           alignItems: "start",
           width: "100%",
-          height: "400px",
+          
         },
       }}
     >
         <Carousel autoPlay interval={8000} infiniteLoop showThumbs={false} >
-          <Box sx={{ width: "100%", height: "50%" }}>
+          <Box sx={{ width: "100%" }}>
             <img src={carrossel1} alt="Imagem 1"/>
           </Box>
-          <Box sx={{ width: "100%", height: "50%" }}>
+          <Box sx={{ width: "100%" }}>
             <img src={carrossel2} alt="Imagem 2" />
           </Box>
-          <Box sx={{ width: "100%", height: "50%" }}>
+          <Box sx={{ width: "100%" }}>
             <img src={carrossel3} alt="Imagem 3"/>
           </Box>
         </Carousel>

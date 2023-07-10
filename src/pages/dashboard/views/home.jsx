@@ -8,6 +8,7 @@ import Nos1 from "../../../assets/images/nos/1.jpg";
 import Nos2 from "../../../assets/images/nos/2.jpg";
 import Nos3 from "../../../assets/images/nos/3.jpg";
 import Nos4 from "../../../assets/images/nos/4.jpg";
+import dressImg from "../../../assets/images/dressImg.jpeg";
 import Countdown from "./components/countdown";
 import LavandaP from "../../../assets/images/lavanda/lavanda1.png";
 import LavandaG from "../../../assets/images/lavanda/lavanda2.png";
@@ -24,7 +25,7 @@ export default function Home() {
     justifyContent: "center",
     alignItems: "center",
     flexDirection: "column",
-    width: "99vw",
+    width: "99.25vw",
     "@media (max-width: 768px)": {
       width: "100vw"
     }
@@ -34,9 +35,6 @@ export default function Home() {
   <Box
   sx={{
     marginBottom: "30px",
-    "@media (max-width: 768px)": {
-      marginBottom: "-150px"
-    },
   }}
   >
   <CarouselComponent/>
@@ -274,13 +272,26 @@ export default function Home() {
       </Box>
       <Box
         sx={{
+          display: "flex",
+          alignItems: "center",
           marginTop: "15px",
           marginBottom: "15px",
-          maxWidth: "70%",
           textAlign: "center",
+          transition: "all 0.2s",
+          border: "solid 6px #617322",
+
+          '&:hover': {
+            border: "#fff solid 3px",
+            transform: "scale(1.1)",
+            background: "#4F328C"
+          }
         }}
       >
-        <Typography>Em construção</Typography>
+        <img
+          src={dressImg}
+          alt="Felipe e Elina"
+          style={{ width: "400px", height: "auto" }}
+        />
       </Box>
 
       <section id="lista"></section>
