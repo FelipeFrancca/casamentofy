@@ -6,8 +6,6 @@ import CarouselComponent from "./components/CarouselComponent.tsx";
 import Banner from "../../../assets/images/banner.png";
 import Nos1 from "../../../assets/images/nos/1.jpg";
 import Nos2 from "../../../assets/images/nos/2.jpg";
-import Nos3 from "../../../assets/images/nos/3.jpg";
-import Nos4 from "../../../assets/images/nos/4.jpg";
 import dressImg from "../../../assets/images/dressImg.jpeg";
 import Countdown from "./components/countdown";
 import LavandaP from "../../../assets/images/lavanda/lavanda1.png";
@@ -159,25 +157,6 @@ export default function Home() {
               height: "auto",
               border: "solid 6px #617322",
             }}
-          />
-          <img
-            src={Nos3}
-            alt="Felipe e Elina"
-            style={{
-              width: "300px",
-              height: "auto",
-              border: "solid 6px #617322",
-            }}
-          />
-          <img
-            src={Nos4}
-            alt="Felipe e Elina"
-            style={{
-              width: "300px",
-              height: "auto",
-              border: "solid 6px #617322",
-            }}
-            
           />
         </Box>
         
