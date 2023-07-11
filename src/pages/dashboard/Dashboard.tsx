@@ -24,30 +24,45 @@ export default function DrawerAppBar(props: Props) {
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-      <Typography variant="h6" sx={{ my: 2 }}>
+      <Typography variant="h6" sx={{ my: 1.7 }}>
         Elina e Felipe
       </Typography>
       <Divider />
-      <Box  sx={{ display: { xs: "none", sm: "block" } }}>
-      <List>
-  {[
-    { text: 'Ínicio', href: '#inicio' },
-    { text: 'Os Noivos', href: '#osnoivos' },
-    { text: 'Cerimônia e Recepção', href: '#cerimonia' },
-    { text: 'Vestimenta', href: '#vestimenta' },
-    { text: 'Confirmação de Presença', href: '#confimacao' },
-    { text: 'Lista de Presentes', href: '#lista' },
-  ].map((item, index) => (
-    <ListItem key={item.text} disablePadding>
-      <ListItemButton component="a" href={item.href}>
-        <ListItemIcon>
-          
-        </ListItemIcon>
-        <ListItemText primary={item.text} />
-      </ListItemButton>
-    </ListItem>
-  ))}
-</List>
+      <Box>
+      <nav aria-label="secondary mailbox folders">
+        <List>
+          <ListItem disablePadding>
+            <ListItemButton component="a" href="#inicio" sx={{color: "#000", textTransform: "uppercase", textAlign: "center"}}>
+              <ListItemText primary="Ínicio" />
+            </ListItemButton>
+          </ListItem>
+          <ListItem disablePadding>
+            <ListItemButton component="a" href="#osnoivos" sx={{textTransform: "uppercase", textAlign: "center"}}>
+              <ListItemText primary="Os Noivos" />
+            </ListItemButton>
+          </ListItem>
+          <ListItem disablePadding>
+            <ListItemButton component="a" href="#cerimonia" sx={{textTransform: "uppercase", textAlign: "center"}}>
+              <ListItemText primary="Cerimônia e Recepção" />
+            </ListItemButton>
+          </ListItem>
+          <ListItem disablePadding>
+            <ListItemButton component="a" href="#vestimenta" sx={{textTransform: "uppercase", textAlign: "center"}}>
+              <ListItemText primary="Vestimenta" />
+            </ListItemButton>
+          </ListItem>
+          <ListItem disablePadding>
+            <ListItemButton component="a" href="#confimacao" sx={{textTransform: "uppercase", textAlign: "center"}}>
+              <ListItemText primary="Confirmação de Presença" />
+            </ListItemButton>
+          </ListItem>
+          <ListItem disablePadding>
+            <ListItemButton component="a" href="#lista" sx={{textTransform: "uppercase", textAlign: "center"}}>
+              <ListItemText primary="Lista de Presentes" />
+            </ListItemButton>
+          </ListItem>
+        </List>
+      </nav>
 
           </Box>
     </Box>
@@ -91,17 +106,41 @@ export default function DrawerAppBar(props: Props) {
           >
             Elina e Felipe França
           </Typography>
-          <Box  sx={{ display: { xs: "none", sm: "block" } }}>
-        <nav>
-          <ul style={{ listStyle: "none", display: "flex", justifyContent: "center", alignItems: "center" , gap: "0.75rem", }}>
-            <li><a style={{ textDecoration: "none", color: "#fff", fontWeight: "700", textTransform: "uppercase" }} href="#inicio">Ínicio</a></li>
-            <li><a style={{ textDecoration: "none", color: "#fff", fontWeight: "700", textTransform: "uppercase" }} href="#osnoivos">Os Noivos</a></li>
-            <li><a style={{ textDecoration: "none", color: "#fff", fontWeight: "700", textTransform: "uppercase" }} href="#cerimonia">Cerimônia e Recepção</a></li>
-            <li><a style={{ textDecoration: "none", color: "#fff", fontWeight: "700", textTransform: "uppercase" }} href="#vestimenta">Vestimenta</a></li>
-            <li><a style={{ textDecoration: "none", color: "#fff", fontWeight: "700", textTransform: "uppercase" }} href="#confimacao">Confirmação de Presença</a></li>
-            <li><a style={{ textDecoration: "none", color: "#fff", fontWeight: "700", textTransform: "uppercase" }} href="#lista">Lista de Presentes</a></li>
-          </ul>
-        </nav>
+          <Box  sx={{ display: { xs: "none", sm: "block", } }}>
+          <nav>
+        <List sx={{display: "flex", flexDirection: "row", textTransform: "uppercase", fontWeight: "900"}}>
+          <ListItem disablePadding>
+            <ListItemButton component="a" href="#inicio" sx={{textAlign: "center"}}>
+              <ListItemText primary="Ínicio" />
+            </ListItemButton>
+          </ListItem>
+          <ListItem disablePadding>
+            <ListItemButton component="a" href="#osnoivos" sx={{textAlign: "center"}}>
+              <ListItemText primary="Os Noivos" />
+            </ListItemButton>
+          </ListItem>
+          <ListItem disablePadding>
+            <ListItemButton component="a" href="#cerimonia" sx={{textAlign: "center"}}>
+              <ListItemText primary="Cerimônia e Recepção" />
+            </ListItemButton>
+          </ListItem>
+          <ListItem disablePadding>
+            <ListItemButton component="a" href="#vestimenta" sx={{textAlign: "center"}}>
+              <ListItemText primary="Vestimenta" />
+            </ListItemButton>
+          </ListItem>
+          <ListItem disablePadding>
+            <ListItemButton component="a" href="#confimacao" sx={{textAlign: "center"}}>
+              <ListItemText primary="Confirmação de Presença" />
+            </ListItemButton>
+          </ListItem>
+          <ListItem disablePadding>
+            <ListItemButton component="a" href="#lista" sx={{textAlign: "center"}}>
+              <ListItemText primary="Lista de Presentes" />
+            </ListItemButton>
+          </ListItem>
+        </List>
+      </nav>
           </Box>
         </Toolbar>
       </AppBar>
@@ -130,7 +169,6 @@ export default function DrawerAppBar(props: Props) {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-
         }}>
         <Outlet />
         </Container>

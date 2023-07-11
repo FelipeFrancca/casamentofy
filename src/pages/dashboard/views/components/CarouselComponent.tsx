@@ -16,10 +16,10 @@ const CarouselComponent: React.FC = () => {
         width: "100%",  
         overflow: "hidden",
         backgroundSize: "cover",
+        marginTop: "-60px",
         "@media (max-width: 768px)": {
           alignItems: "start",
           width: "100%",
-          
         },
       }}
     >
